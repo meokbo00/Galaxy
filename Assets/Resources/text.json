@@ -1,0 +1,26 @@
+[
+   {
+      "id":101,
+      "text":"......",
+      "corutine":"x",
+      "delaytime":0.5
+   },
+   {
+      "id":102,
+      "text":"...야",
+      "corutine":"o",
+      "delaytime":0.5
+   },
+   {
+      "id":103,
+      "text":"어우 어두워<br> 불부터 좀 키자",
+      "corutine":"x",
+      "delaytime":0.05
+   },
+   {
+      "id":104,
+      "text":"뭘봐",
+      "corutine":"o",
+      "delaytime":0.05
+   }
+]

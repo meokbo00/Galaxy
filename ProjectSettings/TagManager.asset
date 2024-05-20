@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - P1deadzone
+  - P2deadzone
+  - P1ball
+  - P2ball
+  - Item_Durability
+  - Item_Fasten
+  - Item_Force
+  - Item_Invincible
+  - Item_Random_number
+  - Item_Reduction
+  - Item_BlackHole
+  - Item_Plus1
+  - Item
+  - P1Item
+  - P2Item
+  - Stage
+  - StageBall
+  - StageDeadZone
+  - SDZ_Top
+  - SDZ_Bottom
+  - SDZ_Left
+  - SDZ_Right
+  - Item_Random_skill
+  - Item_Five_Round
+  - Item_Plus2
+  - EnemyBall
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
