@@ -357,10 +357,10 @@ MonoBehaviour:
   hasExpanded: 0
   enemy1Fires:
   - {fileID: 5104137312958579742}
-  MaxHP: 4
-  MinHP: 6
-  MaxFireTime: 5
-  MinFireTime: 8
+  MaxHP: 3
+  MinHP: 5
+  MaxFireTime: 6
+  MinFireTime: 9
 --- !u!1 &3270130263428601711
 GameObject:
   m_ObjectHideFlags: 0

@@ -357,7 +357,7 @@ MonoBehaviour:
   hasExpanded: 0
   enemy1Fires:
   - {fileID: 5104137312958579742}
-  MaxHP: 4
+  MaxHP: 3
   MinHP: 6
   MaxFireTime: 3
   MinFireTime: 5
