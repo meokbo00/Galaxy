@@ -362,8 +362,8 @@ MonoBehaviour:
   - {fileID: 8812510422021566446}
   MaxHP: 1
   MinHP: 3
-  MaxFireTime: 5.5
-  MinFireTime: 7.5
+  MaxFireTime: 7.5
+  MinFireTime: 5.5
 --- !u!1 &3270130263428601711
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,8 +409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 1100004579995390317, guid: 6ba141c4d6db9c84b8945b4788e00a74, type: 3}
-  MinPower: 0
-  MaxPower: 0
+  MinPower: 4
+  MaxPower: 8
 --- !u!1 &6226797375017529408
 GameObject:
   m_ObjectHideFlags: 0

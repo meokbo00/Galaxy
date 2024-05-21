@@ -48,7 +48,7 @@ public class SPGameManager : MonoBehaviour
                 {
                     if (fireitem != null)
                     {
-                        fireitem.gameObject.tag = "P1Item";
+                        //fireitem.gameObject.tag = "P1Item";
                         Instantiate(fireitem, clickPosition, Quaternion.identity);
                         Debug.Log("P1이 아이템을 사용하였습니다");
                         Debug.Log("아이템의 이름은 " + fireitem.gameObject.name + "입니다");

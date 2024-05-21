@@ -359,8 +359,8 @@ MonoBehaviour:
   - {fileID: 5104137312958579742}
   MaxHP: 1
   MinHP: 3
-  MaxFireTime: 3
-  MinFireTime: 5
+  MaxFireTime: 5
+  MinFireTime: 3
 --- !u!1 &3270130263428601711
 GameObject:
   m_ObjectHideFlags: 0
