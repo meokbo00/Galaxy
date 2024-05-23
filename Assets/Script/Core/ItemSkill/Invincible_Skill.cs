@@ -16,8 +16,6 @@ public class Invincible_Skill : MonoBehaviour
 
     public AudioSource HitSound;
     public AudioSource SwellSound;
-
-
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -67,8 +65,8 @@ public class Invincible_Skill : MonoBehaviour
         {
             HitSound.Play();
         }
-        if ((coll.gameObject.tag == "P1ball" || coll.gameObject.tag == "P2ball" || coll.gameObject.tag == "P1Item" || coll.gameObject.tag == "P2Item"
-            || coll.gameObject.tag == "EnemyBall"))
+        if (coll.gameObject.tag == "P1ball" || coll.gameObject.tag == "P2ball" || coll.gameObject.tag == "P1Item" || coll.gameObject.tag == "P2Item"
+            || coll.gameObject.tag == "EnemyBall" || coll.gameObject.tag == "Item")
         {
             Destroy(coll.gameObject);
             Destroy(gameObject);

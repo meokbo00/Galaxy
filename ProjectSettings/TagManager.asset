@@ -30,6 +30,8 @@ TagManager:
   - Item_Five_Round
   - Item_Plus2
   - EnemyBall
+  - Enemy
+  - EnemyCenter
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,7 @@ public class EnemyBulletControl : MonoBehaviour
     private bool hasBeenReleased = false;
     private float rotationAngle = 0f; // 회전 각도를 저장할 변수
 
+    public float fontsize;
     public int BallMinHP = 1;
     public int BallMaxHP = 6;
     //public AudioSource HitSound;
@@ -30,7 +31,7 @@ public class EnemyBulletControl : MonoBehaviour
         textMesh = textObject.AddComponent<TextMeshPro>();
         randomNumber = Random.Range(BallMinHP, BallMaxHP);
         textMesh.text = randomNumber.ToString();
-        textMesh.fontSize = 2;
+        textMesh.fontSize = fontsize;
         textMesh.alignment = TextAlignmentOptions.Center;
         textMesh.autoSizeTextContainer = true;
         textMesh.rectTransform.localPosition = Vector3.zero;

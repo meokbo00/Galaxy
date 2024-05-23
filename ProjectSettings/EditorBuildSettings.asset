@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MultiPlay/P2 Win.unity
     guid: 7613f56e957990d4e9620146ee435572
+  - enabled: 1
+    path: Assets/Scenes/Practice/Example Scene.unity
+    guid: e8eed31c1c0625f4bbfe8dec9cb7d694
+  - enabled: 1
+    path: Assets/Scenes/Practice/Design Scene.unity
+    guid: 9505def9ed6ba9e41acb3611f3703a67
   m_configObjects: {}

@@ -34,7 +34,7 @@ public class ShowP1ItemIcon : MonoBehaviour
                 }
             }
             fullItemAudio = GetComponent<AudioSource>();
-            fullItemAudio.Play();
+            //fullItemAudio.Play();
         }
     }
 }

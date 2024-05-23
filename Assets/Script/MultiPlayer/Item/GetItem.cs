@@ -10,7 +10,7 @@ public class GetItem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Rigidbody2D otherRigidbody = collision.gameObject.GetComponent<Rigidbody2D>();
-        if ((collision.gameObject.tag == "P1ball" || collision.gameObject.tag == "P1Item" ) && otherRigidbody != null)
+        if ((collision.gameObject.tag == "P1ball" || collision.gameObject.tag == "P1Item" || collision.gameObject.tag == "Item") && otherRigidbody != null)
         {
             string destroyedObjecttag = gameObject.tag;
             ShowP1ItemIcon itemIconScript = FindObjectOfType<ShowP1ItemIcon>();
