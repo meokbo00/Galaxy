@@ -15,7 +15,6 @@ TagManager:
   - Item_Random_number
   - Item_Reduction
   - Item_BlackHole
-  - Item_Plus1
   - Item
   - P1Item
   - P2Item
@@ -26,12 +25,10 @@ TagManager:
   - SDZ_Bottom
   - SDZ_Left
   - SDZ_Right
-  - Item_Random_skill
-  - Item_Five_Round
-  - Item_Plus2
   - EnemyBall
   - Enemy
   - EnemyCenter
+  - Gojung
   layers:
   - Default
   - TransparentFX

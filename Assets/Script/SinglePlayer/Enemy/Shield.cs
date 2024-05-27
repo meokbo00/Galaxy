@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TEnemyCenter : MonoBehaviour
+public class Shield : MonoBehaviour
 {
     Rigidbody2D rigid;
-    public int randomNumber;
+    public int ShieldHP;
     public int initialRandomNumber; // 초기 randomNumber 값을 저장할 변수
     public TextMeshPro textMesh;
     public bool isShowHP;
@@ -20,13 +20,13 @@ public class TEnemyCenter : MonoBehaviour
         GameObject textObject = new GameObject("TextMeshPro");
         textObject.transform.parent = transform;
         textMesh = textObject.AddComponent<TextMeshPro>();
-        randomNumber = Random.Range(MinHP, MaxHP);
-        initialRandomNumber = randomNumber; // 초기 randomNumber 값을 저장
+        ShieldHP = Random.Range(MinHP, MaxHP);
+        initialRandomNumber = ShieldHP; // 초기 randomNumber 값을 저장
         if (isShowHP)
         {
-            textMesh.text = randomNumber.ToString();
+            textMesh.text = ShieldHP.ToString();
         }
-        textMesh.fontSize = 6;
+        textMesh.fontSize = 3;
         textMesh.alignment = TextAlignmentOptions.Center;
         textMesh.autoSizeTextContainer = true;
         textMesh.rectTransform.localPosition = Vector3.zero;
@@ -44,17 +44,17 @@ public class TEnemyCenter : MonoBehaviour
         if (coll.gameObject.tag == "P1ball" || coll.gameObject.tag == "P2ball" || coll.gameObject.tag == "P1Item" || coll.gameObject.tag == "P2Item"
             || coll.gameObject.tag == "Item")
         {
-            if (randomNumber > 0)
+            if (ShieldHP > 0)
             {
-                randomNumber--;
+                ShieldHP--;
                 if (isShowHP)
                 {
-                    textMesh.text = randomNumber.ToString();
+                    textMesh.text = ShieldHP.ToString();
                 }
             }
-            if (randomNumber <= 0)
+            if (ShieldHP <= 0)
             {
-                Destroy(transform.parent.gameObject); // 부모 오브젝트 삭제
+                Destroy(gameObject); // 부모 오브젝트 삭제
             }
         }
     }

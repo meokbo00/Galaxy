@@ -19,6 +19,7 @@ public class ShowText : MonoBehaviour
     private List<Chat> chats;
     private int currentChatIndex = 0;
     private bool isTyping = false;
+    private Coroutine typingCoroutine;
 
     void Start()
     {
@@ -31,10 +32,20 @@ public class ShowText : MonoBehaviour
 
     void Update()
     {
-        if (!isTyping && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            currentChatIndex++;
-            DisplayCurrentChat();
+            if (isTyping)
+            {
+                // Stop the typing coroutine and display the full text immediately
+                StopCoroutine(typingCoroutine);
+                chatting.text = chats[currentChatIndex].text;
+                isTyping = false;
+            }
+            else
+            {
+                currentChatIndex++;
+                DisplayCurrentChat();
+            }
         }
     }
 
@@ -42,7 +53,7 @@ public class ShowText : MonoBehaviour
     {
         if (currentChatIndex < chats.Count)
         {
-            StartCoroutine(Typing(chats[currentChatIndex].text, chats[currentChatIndex].delaytime)); 
+            typingCoroutine = StartCoroutine(Typing(chats[currentChatIndex].text, chats[currentChatIndex].delaytime));
         }
         else
         {
@@ -50,10 +61,10 @@ public class ShowText : MonoBehaviour
         }
     }
 
-    IEnumerator Typing(string talk, float delaytime) 
+    IEnumerator Typing(string talk, float delaytime)
     {
         isTyping = true;
-        chatting.text = null;
+        chatting.text = string.Empty;
 
         for (int i = 0; i < talk.Length; i++)
         {

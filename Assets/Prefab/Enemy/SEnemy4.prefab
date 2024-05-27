@@ -256,15 +256,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefabs:
-  - {fileID: 1721920693946575469, guid: e137a70faf851b44ba016f5a1e040ef9, type: 3}
-  - {fileID: 6102662975464993372, guid: 9c5b235ac899edd4593dbea844254a2f, type: 3}
-  - {fileID: 2027076699224104286, guid: a846b850075475c45a6943b7e3de33de, type: 3}
-  - {fileID: 439666419057068905, guid: 8255c37569d49ad4dbe7563bf0d94840, type: 3}
-  - {fileID: 9219627083266486056, guid: 5fdb9eb59f153404cb128440afba3640, type: 3}
-  - {fileID: 3316885824965820453, guid: 2f1fcf75ab09da046a892a19a36bb1fe, type: 3}
-  - {fileID: 3154260539122837315, guid: 6991a1aafcfb85148bb56c67601569f1, type: 3}
-  MinPower: 15
-  MaxPower: 20
+  - {fileID: 1721920693946575469, guid: 8b904a0eceedf284b98fbddfd5e4cb14, type: 3}
+  - {fileID: 6102662975464993372, guid: 915883c1d54573544b4c029df20ee096, type: 3}
+  - {fileID: 2027076699224104286, guid: 700f1e4d6cd195643b40eae0053f96fa, type: 3}
+  - {fileID: 439666419057068905, guid: 84bce1c9ebd995b46a1c418ed42aa261, type: 3}
+  - {fileID: 9219627083266486056, guid: 5ba178eab7558de4c9e24a560df6cd0a, type: 3}
+  - {fileID: 3316885824965820453, guid: ec5ad16a7ce21ea4e9771124f9bb38d8, type: 3}
+  - {fileID: 3154260539122837315, guid: d12564062bb3a7e40a0b06f2b09d3c4c, type: 3}
+  MinPower: 6
+  MaxPower: 8
 --- !u!1 &8643793535985890892
 GameObject:
   m_ObjectHideFlags: 0

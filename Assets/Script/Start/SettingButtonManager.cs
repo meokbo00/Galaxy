@@ -16,6 +16,25 @@ public class SettingButtonManager : MonoBehaviour
 
     public AudioSource ButtonAudio;
 
+    public static SettingButtonManager Instance = null;
+    public bool isBGM = true;
+    public bool isSoundEffect = true;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            if (Instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
     void Start()
     {
         BGM_ON.onClick.AddListener(BGM_ONClicked);
@@ -27,24 +46,28 @@ public class SettingButtonManager : MonoBehaviour
     }
     void BGM_ONClicked()
     {
+        this.isBGM = true;
         ButtonAudio.Play();
         BGM_ON.gameObject.SetActive(false);
         BGM_OFF.gameObject.SetActive(true);
     }
     void BGM_OFFClicked()
     {
+        this.isBGM = false;
         ButtonAudio.Play();
         BGM_ON.gameObject.SetActive(true);
         BGM_OFF.gameObject.SetActive(false);
     }
     void Sound_Effect_ONClicked()
     {
+        this.isSoundEffect = true;
         ButtonAudio.Play();
-        Sound_Effect_ON.gameObject.SetActive(false );
-        Sound_Effect_OFF.gameObject.SetActive (true );
+        Sound_Effect_ON.gameObject.SetActive(false);
+        Sound_Effect_OFF.gameObject.SetActive(true);
     }
     void Sound_Effect_OFFClicked()
     {
+        this.isSoundEffect = false;
         ButtonAudio.Play();
         Sound_Effect_ON.gameObject.SetActive(true);
         Sound_Effect_OFF.gameObject.SetActive(false);

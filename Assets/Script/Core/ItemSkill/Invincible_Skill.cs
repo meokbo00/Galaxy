@@ -66,7 +66,7 @@ public class Invincible_Skill : MonoBehaviour
             HitSound.Play();
         }
         if (coll.gameObject.tag == "P1ball" || coll.gameObject.tag == "P2ball" || coll.gameObject.tag == "P1Item" || coll.gameObject.tag == "P2Item"
-            || coll.gameObject.tag == "EnemyBall" || coll.gameObject.tag == "Item")
+            || coll.gameObject.tag == "EnemyBall" || coll.gameObject.tag == "Item" || coll.gameObject.tag == "Gojung")
         {
             Destroy(coll.gameObject);
             Destroy(gameObject);

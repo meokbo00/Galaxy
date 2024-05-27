@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject P1firezone;
     public GameObject P2firezone;
-    public GameObject P1Itemsave;
-    public GameObject P2Itemsave;
 
     public GameObject fireitem;
 
@@ -31,13 +29,13 @@ public class GameManager : MonoBehaviour
         this.fireitem = null;
         switch (icontag)
         {
-            case "Item_BlackHole": fireitem = FireItemPrefab[0];break;
-            case "Item_Durability":fireitem = FireItemPrefab[1];break;
-            case "Item_Fasten":fireitem = FireItemPrefab[2];break;
-            case "Item_Force":fireitem = FireItemPrefab[3];break;
-            case "Item_Invincible":fireitem = FireItemPrefab[4];break;
-            case "Item_Random_number":fireitem = FireItemPrefab[5];break;
-            case "Item_Reduction":fireitem = FireItemPrefab[6];break;
+            case "Item_BlackHole": fireitem = FireItemPrefab[0]; break;
+            case "Item_Durability": fireitem = FireItemPrefab[1]; break;
+            case "Item_Fasten": fireitem = FireItemPrefab[2]; break;
+            case "Item_Force": fireitem = FireItemPrefab[3]; break;
+            case "Item_Invincible": fireitem = FireItemPrefab[4]; break;
+            case "Item_Random_number": fireitem = FireItemPrefab[5]; break;
+            case "Item_Reduction": fireitem = FireItemPrefab[6]; break;
         }
     }
     private void Update()
@@ -57,29 +55,19 @@ public class GameManager : MonoBehaviour
                         Instantiate(fireitem, clickPosition, Quaternion.identity);
                         Debug.Log("P1이 아이템을 사용하였습니다");
                         Debug.Log("아이템의 이름은 " + fireitem.gameObject.name + "입니다");
-                        P1FireMode = false;
-                        P2FireMode = true;
-                        isDragging = true;
-                        P1firezone.gameObject.SetActive(false);
-                        P2firezone.gameObject.SetActive(true);
-                        //P1Itemsave.gameObject.SetActive(false);
-                        //P2Itemsave.gameObject.SetActive(true);
-                        fireitem = null;
-                        break;
                     }
                     else
                     {
                         Instantiate(P1ballPrefab, clickPosition, Quaternion.identity);
                         Debug.Log("P1이 기본구체를 날렸습니다");
-                        P1FireMode = false;
-                        P2FireMode = true;
-                        isDragging = true;
-                        P1firezone.gameObject.SetActive(false);
-                        P2firezone.gameObject.SetActive(true);
-                        //P1Itemsave.gameObject.SetActive(false);
-                        //P2Itemsave.gameObject.SetActive(true);
-                        break;
                     }
+                    P1FireMode = false;
+                    P2FireMode = true;
+                    isDragging = true;
+                    P1firezone.gameObject.SetActive(false);
+                    P2firezone.gameObject.SetActive(true);
+                    fireitem = null;
+                    break;
                 }
                 if (P2FireMode && collider.gameObject == P2firezone)
                 {
@@ -88,29 +76,19 @@ public class GameManager : MonoBehaviour
                         fireitem.gameObject.tag = "P2Item";
                         Instantiate(fireitem, clickPosition, Quaternion.identity);
                         Debug.Log("P2가 아이템을 사용하였습니다");
-                        P1FireMode = true;
-                        P2FireMode = false;
-                        isDragging = true;
-                        P1firezone.gameObject.SetActive(true);
-                        P2firezone.gameObject.SetActive(false);
-                        //P1Itemsave.gameObject.SetActive(true);
-                        //P2Itemsave.gameObject.SetActive(false);
-                        fireitem = null;
-                        break;
                     }
                     else
                     {
                         Instantiate(P2ballPrefab, clickPosition, Quaternion.identity);
                         Debug.Log("P2가 기본구체를 날렸습니다");
-                        P1FireMode = true;
-                        P2FireMode = false;
-                        isDragging = true;
-                        P1firezone.gameObject.SetActive(true);
-                        P2firezone.gameObject.SetActive(false);
-                        //P1Itemsave.gameObject.SetActive(true);
-                        //P2Itemsave.gameObject.SetActive(false);
-                        break;
                     }
+                    P1FireMode = true;
+                    P2FireMode = false;
+                    isDragging = true;
+                    P1firezone.gameObject.SetActive(true);
+                    P2firezone.gameObject.SetActive(false);
+                    fireitem = null;
+                    break;
                 }
             }
         }

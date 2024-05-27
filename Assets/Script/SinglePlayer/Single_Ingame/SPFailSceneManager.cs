@@ -6,7 +6,7 @@ public class SPFailSceneManager : MonoBehaviour
 {
     void Update()
     {
-        int randomnumber = Random.Range(1, 5);
+        int randomnumber = Random.Range(1, 6);
 
         if (Input.GetMouseButtonDown(0))
         {
