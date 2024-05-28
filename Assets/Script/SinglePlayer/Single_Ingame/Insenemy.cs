@@ -1,47 +1,3 @@
-// ¹®¼­ ³»¿¡ ÀÖ´Â ¸ğµç ÀûµéÀ» »ı¼ºÇÏ´Â ½ºÅ©¸³Æ®
-
-//using System.Collections.Generic;
-//using UnityEngine;
-//using Newtonsoft.Json;
-//class Data
-//{
-//    public int id;
-//    public float x;
-//    public float y;
-//}
-//public class Insenemy : MonoBehaviour
-//{
-//    public GameObject enemyball;
-//    public int stage;
-
-//    void Start()
-//    {
-//        var asset = Resources.Load<TextAsset>("enemy");
-//        var json = asset.text;
-//        var datas = JsonConvert.DeserializeObject<List<Data>>(json);
-//        foreach (var data in datas)
-//        {
-//            Debug.LogFormat("{0}, {1}, {2}", data.id, data.x, data.y);
-//            Instantiate(enemyball, new Vector3(data.x, data.y, 0), Quaternion.identity);
-//        }
-//    }
-//}
-
-// ¸¸¾à ´Ù¸¥ ÄÚµå¿¡¼­ stageÀÇ °ªÀ» º¯Çü½ÃÅ°°í ½Í´Ù¸é
-
-//using UnityEngine;
-
-//public class OtherScript : MonoBehaviour
-//{
-//    // Insenemy ½ºÅ©¸³Æ® ÂüÁ¶
-//    public Insenemy insenemyScript;
-
-//    void Start()
-//    {
-//        // Insenemy ½ºÅ©¸³Æ®ÀÇ stage °ªÀ» ¼³Á¤
-//        insenemyScript.stage = 2; // ¿¹½Ã·Î 2¸¦ ¼³Á¤ÇÏ¸é stage°¡ 2ÀÎ Àû¸¸ »ı¼ºµË´Ï´Ù.
-//    }
-//}
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
@@ -55,24 +11,28 @@ class Data
 
 public class Insenemy : MonoBehaviour
 {
-    public GameObject enemyball;
-    public int stage = 1;
+    //public TextAsset EnemySpawnData;
+    //public GameObject Enemy1;
 
     void Start()
     {
-        // ½ºÅ×ÀÌÁö¿¡ ÇØ´çÇÏ´Â ID °è»ê
-
-        var asset = Resources.Load<TextAsset>("enemy");
-        var json = asset.text;
-        var datas = JsonConvert.DeserializeObject<List<Data>>(json);
-        foreach (var data in datas)
-        {
-            // ÇöÀç ½ºÅ×ÀÌÁö¿¡ ÇØ´çÇÏ´Â ID¸¸ »ı¼º
-            if (data.id == stage)
-            {
-                Debug.LogFormat("{0}, {1}, {2}", data.id, data.x, data.y);
-                Instantiate(enemyball, new Vector3(data.x, data.y, 0), Quaternion.identity);
-            }
-        }
+        // stage ë³€ìˆ˜ì— GlobalData.SelectedStage ê°’ì„ í• ë‹¹
+        int stage = GlobalData.SelectedStage;
+        //var asset = Resources.Load<TextAsset>("enemy");
+        //var json = asset.text;
+        //var datas = JsonConvert.DeserializeObject<List<Data>>(json);
+        //foreach (var data in datas)
+        //{
+        //    if (data.id == stage)
+        //    {
+        //        Debug.LogFormat("{0}, {1}, {2}", data.id, data.x, data.y);
+        //        Instantiate(Enemy1, new Vector3(data.x, data.y, 0), Quaternion.identity);
+        //    }
+        //}
+    }
+    private void Update()
+    {
+        int stage = GlobalData.SelectedStage;
+        Debug.Log(stage + "ì´ì§€ë¡±");
     }
 }

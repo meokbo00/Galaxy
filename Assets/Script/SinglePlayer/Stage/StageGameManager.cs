@@ -33,7 +33,7 @@ public class StageGameManager : MonoBehaviour
             Vector3 dragDirection = (currentPosition - clickPosition).normalized;
             shotDirection = -dragDirection;
             isDragging = false;
-            Debug.Log("°øÀÌ ¾ÕÀ¸·Î ÀüÁøÇÕ´Ï´Ù");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
         }
     }
 }
