@@ -84,6 +84,10 @@ public class SPGameManager : MonoBehaviour
                        GameObject.FindGameObjectsWithTag("P1ball").Length;
         if (totalBalls > 12)
         {
+<<<<<<< HEAD
+=======
+            Debug.Log("총알의 개수 총합이 12개를 넘겼습니다");
+>>>>>>> 0b08b7a9e6830b9419995a6345a2422b353c344c
             SceneManager.LoadScene("Fail");
         }
     }

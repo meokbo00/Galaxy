@@ -1,5 +1,6 @@
 [
    {
+<<<<<<< HEAD
       "id": 1,
       "enemies": [
          {"type": "Enemy1", "x": 1.3, "y": 1.3},
@@ -14,5 +15,68 @@
          {"type": "Enemy2", "x": -1.3, "y": -1.3},
          {"type": null, "x": 2, "y": 2}
       ]
+=======
+      "id":1,
+      "FirstEnemy":"Enemy1",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy1",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+   },
+   {
+      "id":2,
+      "FirstEnemy":"Enemy2",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy2",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+   },
+   {
+      "id":3,
+      "FirstEnemy":"Enemy3",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy3",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+   },
+   {
+      "id":4,
+      "FirstEnemy":"Enemy4",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy4",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+   },
+   {
+      "id":5,
+      "FirstEnemy":"Enemy5",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy5",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+   },
+   {
+      "id":6,
+      "FirstEnemy":"Enemy6",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy6",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+   },
+   {
+      "id":7,
+      "FirstEnemy":"Enemy7",
+      "point/0/x":1.3,
+      "point/0/y":1.3,
+      "SecondEnemy":"Enemy7",
+      "point/1/x":-1.3,
+      "point/1/y":-1.3
+>>>>>>> 0b08b7a9e6830b9419995a6345a2422b353c344c
    }
 ]

@@ -2445,6 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318605f7e8079e649a764e3429d60dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Enemy:
   - {fileID: 1574370344208338112, guid: e7321e72f64e198428934206ada4c11d, type: 3}
   - {fileID: 1574370344208338112, guid: b11932bfef7edd149bdd25b047dc977f, type: 3}
@@ -2452,6 +2453,8 @@ MonoBehaviour:
   - {fileID: 1574370344208338112, guid: de22cc4fe358619498f4b571645379c8, type: 3}
   - {fileID: 1574370344208338112, guid: f829bbf452a7b4746bf19478ed9537f9, type: 3}
   jsonFile: {fileID: 4900000, guid: b302c0baca0b98141bea61d811ce462d, type: 3}
+=======
+>>>>>>> 0b08b7a9e6830b9419995a6345a2422b353c344c
 --- !u!4 &1158795323
 Transform:
   m_ObjectHideFlags: 0
