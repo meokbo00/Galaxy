@@ -9,7 +9,7 @@ public class Enemy6center : MonoBehaviour
     public bool hasExpanded = false;
     public int randomNumber;
     private TextMeshPro textMesh;
-    public Enemy1Fire[] enemy1Fires; // ¿©·¯ Enemy1Fire ÂüÁ¶¸¦ À§ÇÑ ¹è¿­
+    public Enemy1Fire[] enemy1Fires; // ï¿½ï¿½ï¿½ï¿½ Enemy1Fire ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
 
     public int MaxHP;
     public int MinHP;
@@ -30,7 +30,7 @@ public class Enemy6center : MonoBehaviour
         textMesh.rectTransform.localPosition = Vector3.zero;
         textMesh.sortingOrder = 3;
 
-        enemy1Fires = GetComponentsInChildren<Enemy1Fire>(); // Enemy1Fire ÄÄÆ÷³ÍÆ® ¹è¿­ ÂüÁ¶
+        enemy1Fires = GetComponentsInChildren<Enemy1Fire>(); // Enemy1Fire ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½
 
         StartCoroutine(RotateObject());
     }
@@ -45,7 +45,7 @@ public class Enemy6center : MonoBehaviour
             }
             if (randomNumber <= 0)
             {
-                Destroy(transform.parent.gameObject); // ºÎ¸ð ¿ÀºêÁ§Æ® »èÁ¦
+                Destroy(transform.parent.gameObject); // ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
             }
         }
     }
@@ -54,7 +54,7 @@ public class Enemy6center : MonoBehaviour
     {
         while (true)
         {
-            // 5ÃÊ µ¿¾È Á¤Áö
+            // 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             yield return new WaitForSeconds(Random.Range(MinFireTime, MaxFireTime));
 
             if (enemy1Fires != null)

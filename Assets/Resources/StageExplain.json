@@ -1,0 +1,42 @@
+[
+   {
+      "id":1,
+      "StageTitle":"1번 스테이지",
+      "StageDetail":"1번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":2,
+      "StageTitle":"2번 스테이지",
+      "StageDetail":"2번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":3,
+      "StageTitle":"3번 스테이지",
+      "StageDetail":"3번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":4,
+      "StageTitle":"4번 스테이지",
+      "StageDetail":"4번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":5,
+      "StageTitle":"5번 스테이지",
+      "StageDetail":"5번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":6,
+      "StageTitle":"6번 스테이지",
+      "StageDetail":"6번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":7,
+      "StageTitle":"7번 스테이지",
+      "StageDetail":"7번 스테이지에 대한 설명입니다"
+   },
+   {
+      "id":8,
+      "StageTitle":"8번 스테이지",
+      "StageDetail":"8번 스테이지에 대한 설명입니다"
+   }
+]

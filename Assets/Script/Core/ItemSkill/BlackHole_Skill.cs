@@ -71,7 +71,7 @@ public class BlackHole_Skill : MonoBehaviour
         }
 
         if ((coll.gameObject.tag == "P1ball" || coll.gameObject.tag == "P2ball" || coll.gameObject.tag == "P1Item" || coll.gameObject.tag == "P2Item"
-            || coll.gameObject.tag == "EnemyBall") && rigid == null)
+            || coll.gameObject.tag == "EnemyBall" || coll.gameObject.tag == "Item") && rigid == null)
         {
             Destroy(coll.gameObject);
         }

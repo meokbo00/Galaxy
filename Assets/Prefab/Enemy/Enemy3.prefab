@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6350379193036845528}
   m_Layer: 0
   m_Name: Enemy3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.793, y: 3.045, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8751840301217236581}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 3980458702231358391}
   m_Layer: 0
   m_Name: Center
-  m_TagString: Untagged
+  m_TagString: EnemyCenter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,17 +355,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increase: 4
   hasExpanded: 0
+  randomNumber: 0
+  initialRandomNumber: 0
+  textMesh: {fileID: 0}
   enemy1Fires:
   - {fileID: 5104137312958579742}
+  isShowHP: 1
+  isHide: 0
   MaxHP: 3
   MinHP: 5
-<<<<<<< HEAD
-  MaxFireTime: 9
-  MinFireTime: 6
-=======
-  MaxFireTime: 6
-  MinFireTime: 9
->>>>>>> c401a7f1f1dcf8f3fa01439ea27e1ebb9db2662b
+  MaxFireTime: 10
+  MinFireTime: 7
+  MaxAngle: 60
+  MinAngle: -60
+  fontsize: 5
 --- !u!1 &3270130263428601711
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 3270130263428601711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.259, z: 0}
+  m_LocalPosition: {x: 0, y: -1.379, z: 0}
   m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -410,6 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5906088adaa709f4283dc9b8021e3979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1100004579995390317, guid: 922aab361474387499e90174188d4bd5, type: 3}
+  enemyBulletPrefabs:
+  - {fileID: 1100004579995390317, guid: 922aab361474387499e90174188d4bd5, type: 3}
   MinPower: 3
   MaxPower: 7

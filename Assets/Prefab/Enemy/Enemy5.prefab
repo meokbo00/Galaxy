@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0.444444, z: 0}
-  m_LocalScale: {x: 0.15, y: 1.1111112, z: 1}
+  m_LocalScale: {x: 0.2, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8751840301217236581}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6350379193036845528}
   m_Layer: 0
   m_Name: Enemy5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.793, y: 3.045, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8751840301217236581}
@@ -219,7 +219,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.44444457, z: 0}
-  m_LocalScale: {x: 0.15, y: 1.1111112, z: 1}
+  m_LocalScale: {x: 0.2, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8751840301217236581}
@@ -376,8 +376,8 @@ Transform:
   m_GameObject: {fileID: 1970705102508043179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.463, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 1.1111112, z: 1}
+  m_LocalPosition: {x: 0.44444, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8751840301217236581}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 3980458702231358391}
   m_Layer: 0
   m_Name: Center
-  m_TagString: Untagged
+  m_TagString: EnemyCenter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,20 +677,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increase: 4
   hasExpanded: 0
+  randomNumber: 0
+  initialRandomNumber: 0
+  textMesh: {fileID: 0}
   enemy1Fires:
   - {fileID: 5104137312958579742}
   - {fileID: 2343203410713362656}
   - {fileID: 6824948547807782032}
   - {fileID: 5293071833537687619}
-  MaxHP: 2
+  isShowHP: 1
+  isHide: 0
+  MaxHP: 3
   MinHP: 1
-<<<<<<< HEAD
   MaxFireTime: 10
   MinFireTime: 7
-=======
-  MaxFireTime: 7
-  MinFireTime: 10
->>>>>>> c401a7f1f1dcf8f3fa01439ea27e1ebb9db2662b
+  MaxAngle: 360
+  MinAngle: 0
+  fontsize: 3
 --- !u!1 &3270130263428601711
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 3270130263428601711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.259, z: 0}
+  m_LocalPosition: {x: 0, y: -1.417, z: 0}
   m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,7 +738,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5906088adaa709f4283dc9b8021e3979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
+  enemyBulletPrefabs:
+  - {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
   MinPower: 3
   MaxPower: 6
 --- !u!1 &3581069089082930095
@@ -764,7 +768,7 @@ Transform:
   m_GameObject: {fileID: 3581069089082930095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -1.3, y: 0, z: 0}
+  m_LocalPosition: {x: -1.381, y: 0, z: 0}
   m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -782,7 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5906088adaa709f4283dc9b8021e3979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
+  enemyBulletPrefabs:
+  - {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
   MinPower: 3
   MaxPower: 6
 --- !u!1 &3766491071812431978
@@ -813,8 +818,8 @@ Transform:
   m_GameObject: {fileID: 3766491071812431978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -0.463, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 1.1111112, z: 1}
+  m_LocalPosition: {x: -0.444444, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8751840301217236581}
@@ -969,7 +974,7 @@ Transform:
   m_GameObject: {fileID: 3872553534731908273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.3, y: 0, z: 0}
+  m_LocalPosition: {x: 1.431, y: 0, z: 0}
   m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -987,7 +992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5906088adaa709f4283dc9b8021e3979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
+  enemyBulletPrefabs:
+  - {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
   MinPower: 3
   MaxPower: 6
 --- !u!1 &7977709529480213236
@@ -1016,7 +1022,7 @@ Transform:
   m_GameObject: {fileID: 7977709529480213236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 1.259, z: 0}
+  m_LocalPosition: {x: 0, y: 1.402, z: 0}
   m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1034,6 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5906088adaa709f4283dc9b8021e3979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
+  enemyBulletPrefabs:
+  - {fileID: 1100004579995390317, guid: 19a29c394c2e14641b6ba4a85b966ba6, type: 3}
   MinPower: 3
   MaxPower: 6

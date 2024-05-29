@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SPGameManager : MonoBehaviour
 {
@@ -77,6 +78,13 @@ public class SPGameManager : MonoBehaviour
             Vector3 dragDirection = (currentPosition - clickPosition).normalized;
             GameManager.shotDirection = -dragDirection;
             isDragging = false;
+        }
+
+        int totalBalls = GameObject.FindGameObjectsWithTag("EnemyBall").Length +
+                       GameObject.FindGameObjectsWithTag("P1ball").Length;
+        if (totalBalls > 12)
+        {
+            SceneManager.LoadScene("Fail");
         }
     }
 
